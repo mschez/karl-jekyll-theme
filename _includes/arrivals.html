@@ -1,0 +1,38 @@
+<!-- ****** New Arrivals Area Start ****** -->
+<section class="new_arrivals_area section_padding_100_0 clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section_heading text-center">
+          <h2>New Arrivals</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="karl-projects-menu mb-100">
+    <div class="text-center portfolio-menu">
+      <button class="btn active" data-filter="*">ALL</button>
+      {% for category in site.data.categories.list %}
+        {% assign a = site.data.products.arrivals | where: "category", category.id %}
+        {% if a.size > 0 %}
+          <button class="btn" data-filter=".{{category.id}}">
+            {{category.name}}
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row karl-new-arrivals">
+      {% for arrival in site.data.products.arrivals %}
+        <div
+          class="col-12 col-sm-6 col-md-4 single_gallery_item {{arrival.category}} wow fadeInUpBig"
+          data-wow-delay="0.{{1 | plus: forloop.index }}s"
+        >
+          {% include product.html product=arrival %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- ****** New Arrivals Area End ****** -->

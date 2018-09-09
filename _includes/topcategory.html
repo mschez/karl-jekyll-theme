@@ -1,0 +1,20 @@
+<!-- ****** Top Category Area Start ****** -->
+<section class="top_catagory_area d-md-flex clearfix">
+  {% for top in site.data.categories.top %}
+    <!-- Single Category Start -->
+    <div
+      class="single_catagory_area d-flex align-items-center bg-img"
+      style="background-image: url({{ top.background | relative_url }});"
+    >
+      <div class="catagory-content">
+        <h6>{{ top.title }}</h6>
+        <h2>{{ top.subtitle }}</h2>
+        <a href="{{ top.link.href }}" class="btn karl-btn">
+          {{ top.link.label }}
+        </a>
+      </div>
+    </div>
+    <!-- Single Category End -->
+  {% endfor %}
+</section>
+<!-- ****** Top Catagory Area End ****** -->

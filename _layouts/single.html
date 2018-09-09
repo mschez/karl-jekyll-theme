@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <!-- body start -->
+  <body>
+    {% if site.data.categories.list.size > 0 %}
+      {% include sidenav.html %}
+    {% endif %}
+    <!-- /.wrapper start -->
+    <div id="wrapper">
+      {% include header.html %}
+      {% include discounts.html %}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+    <!-- /.wrapper end -->
+    {% include scripts.html %}
+  </body>
+  <!-- body end -->
+</html>

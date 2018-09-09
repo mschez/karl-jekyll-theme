@@ -1,0 +1,121 @@
+---
+layout: single
+title: Shop
+---
+
+<section class="shop_grid_area section_padding_100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="shop_sidebar_area">
+          <div class="widget catagory mb-50">
+            <!--  Side Nav  -->
+            <div class="nav-side-menu">
+              <h6 class="mb-0">Catagories</h6>
+              <div class="menu-list">
+                <ul id="menu-content2" class="menu-content collapse out">
+                  {% include categories.html categories=site.data.categories.list target="shop" %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="widget price mb-50">
+            <h6 class="widget-title mb-30">Filter by Price</h6>
+            <div class="widget-desc">
+              <div class="slider-range">
+                {% assign prices = site.data.products.all | map: "price" | sort %}
+                {% assign min = prices | first %}
+                {% assign max = prices | last %}
+                <div
+                  data-min="{{min}}"
+                  data-max="{{max}}"
+                  data-unit="{{currency}}"
+                  class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                  data-value-min="{{min}}"
+                  data-value-max="{{max}}"
+                  data-label-result="Price:"
+                >
+                  <div class="ui-slider-range ui-widget-header ui-corner-all">
+                  </div>
+                  <span
+                    class="ui-slider-handle ui-state-default ui-corner-all" 
+                    tabindex="0"
+                  > 
+                  </span>
+                  <span
+                    class="ui-slider-handle ui-state-default ui-corner-all"
+                    tabindex="0"
+                  >
+                  </span>
+                </div>
+                <div class="range-price">Price: {{min}} - {{max}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="widget color mb-70">
+            <h6 class="widget-title mb-30">Filter by Color</h6>
+            {% assign colors = site.data.products.all | map: "color" %}
+            {% assign uniques = colors | uniq %}
+            <div class="widget-desc">
+              <ul class="d-flex justify-content-between">
+                {% for color in uniques %}
+                  {% assign c = site.data.products.all | where: "color", color %}
+                  <li class="{{color}}">
+                    <a href="#"><span>({{c.size}})</span></a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="widget size mb-50">
+            <h6 class="widget-title mb-30">Filter by Size</h6>
+            {% assign sizes = "" | split: ", " %}
+            {% for product in site.data.products.all %}
+              {% assign a = product.sizes | join: ", " | split: ', ' %}
+              {% assign sizes = sizes | concat: a %}
+            {% endfor %}
+            {% assign uniques = sizes | uniq | sort %}
+            <div class="widget-desc">
+              <ul class="d-flex justify-content-between">
+                {% for size in uniques %}
+                  <li><a href="#">{{size}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="widget recommended">
+            <h6 class="widget-title mb-30">Recommended</h6>
+            <div class="widget-desc">
+              {% for product in site.data.products.recommended %}
+                <!-- Single Recommended Product -->
+                <div class="single-recommended-product d-flex mb-30">
+                  <div class="single-recommended-thumb mr-3">
+                    <img src="{{ product.image | relative_url }}" alt="">
+                  </div>
+                  <div class="single-recommended-desc">
+                    <h6>{{product.name}}</h6>
+                    <p>{{site.currency}}{{product.price}}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9">
+        <div class="shop_grid_product_area">
+          <div class="row">
+            {% for product in site.data.products.all %}
+              <div
+                class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig"
+                data-wow-delay="0.{{forloop.index}}s"
+              >
+                {% include product.html product=product %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

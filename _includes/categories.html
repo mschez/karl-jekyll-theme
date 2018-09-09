@@ -1,0 +1,28 @@
+{% for category in include.categories %}
+  <!-- Single Item Start -->
+  {% assign class = "collapsed" %}
+  {% if forloop.index == 1 %}
+    {% assign class = "collapsed active" %}
+  {% endif %}
+  <li
+    data-toggle="collapse"
+    data-target="#{{include.target}}-{{category.id}}"
+    class="{{class}}"
+  >
+    <a href="#">
+      {{category.name}} <span class="arrow"></span>
+    </a>
+    {% if category.subcategories.size > 0 %}
+      <ul class="sub-menu collapse" id="{{include.target}}-{{category.id}}">
+        {% for subcategory in category.subcategories %}
+          <li>
+            <a href="{{subcategory.href}}">
+              {{subcategory.name}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+  <!-- Single Item End -->
+{% endfor %}

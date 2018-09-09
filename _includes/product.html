@@ -1,0 +1,20 @@
+<!-- Single gallery Item Start -->
+<div class="product-img">
+  <img src="{{ include.product.image | relative_url }}" alt="">
+  <div class="product-quickview">
+    <a
+      href="#"
+      data-toggle="modal"
+      data-target="#quickview-{{include.product.id}}"
+    >
+      <i class="ti-plus"></i>
+    </a>
+  </div>
+</div>
+<div class="product-description">
+  <h4 class="product-price">{{site.currency}}{{include.product.price}}</h4>
+  <p>{{include.product.description}}</p>
+  <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+</div>
+{% include quickviewmodal.html product=include.product %}
+<!-- Single gallery Item End -->

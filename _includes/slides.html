@@ -1,0 +1,46 @@
+<!-- ****** Welcome Slides Area Start ****** -->
+<section class="welcome_area">
+  <div class="welcome_slides owl-carousel">
+    {% for slide in site.data.slides %}
+      <!-- Single Slide Start -->
+      <div
+        class="single_slide height-800 bg-img background-overlay"
+        style="background-image: url({{ slide.background | relative_url }});"
+      >
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <div class="welcome_slide_text">
+                <h6
+                  data-animation="{{ slide.title.animation.name }}"
+                  data-delay="{{ slide.title.animation.delay }}"
+                  data-duration="{{ slide.title.animation.duration }}"
+                >
+                  {{ slide.title.label }}
+                </h6>
+                <h2
+                  data-animation="{{ slide.subtitle.animation.name }}"
+                  data-delay="{{ slide.subtitle.animation.delay }}"
+                  data-duration="{{ slide.subtitle.animation.duration }}"
+                >
+                  {{ slide.subtitle.label }}
+                </h2>
+                <a
+                  href="{{ slide.link.href }}"
+                  class="btn karl-btn"
+                  data-animation="{{ slide.link.animation.name }}"
+                  data-delay="{{ slide.link.animation.delay }}"
+                  data-duration="{{ slide.link.animation.duration }}"
+                >
+                  {{ slide.link.label }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Single Slide End -->
+    {% endfor %}
+  </div>
+</section>
+<!-- ****** Welcome Slides Area End ****** -->

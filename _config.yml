@@ -1,0 +1,100 @@
+# Site settings
+title: "Karl"
+email: "support@colorlib.com"
+short: "Fashion Ecommerce Template"
+description: >-
+  The moment an idea for an online store project occurs, you can start realizing it with Karl free fashion eCommerce website template.
+  There is no need to wait and postpone the building process while the tool is at your disposal and does not cost you a dime. Not only that but Karl also follows the latest web technologies, has an up to date web design and many premium features. To some extent, Karl looks more premium than free what you can take to your advantage.
+
+  Special deal boxes, slideshow and basic and off-canvas menus call for a top-notch performance. Karl is a responsive and retina ready, adaptable and customizable. But for the most part, you will want to use it out of the box due to its prettiness.
+baseurl: "/"
+url: ""
+
+# Analytics settings
+analytics: ""
+
+# Build settings
+markdown: "kramdown"
+plugins:
+  - "jekyll-feed"
+  - "jekyll-sitemap"
+
+# Cart settings
+currency: "€"
+
+# Contact settings
+telephone: "+00 123 456 789"
+
+# Countries settings
+countries:
+  - code: "usa"
+    name: "United States"
+  - code: "uk"
+    name: "United Kingdom"
+  - code: "ger"
+    name: "Germany"
+  - code: "fra"
+    name: "France"
+  - code: "ind"
+    name: "India"
+  - code: "aus"
+    name: "Australia"
+  - code: "bra"
+    name: "Brazil"
+  - code: "cana"
+    name: "Canada"
+
+# Main menu settings
+menu:
+  - hot: false
+    href: "/"
+    label: "Home"
+    type: "active"
+  - hot: false
+    href: "/"
+    items:
+      - href: "/shop"
+        label: "Shop"
+      - href: "/cart"
+        label: "Cart"
+      - href: "/checkout"
+        label: "Checkout"
+    label: "Pages"
+    type: "dropdown"
+  - hot: false
+    href: "#"
+    label: "Dresses"
+    type: ""
+  - hot: true
+    href: "/shoes"
+    label: "Shoes"
+    type: ""
+  - hot: false
+    href: "#"
+    label: "Contact"
+    type: ""
+
+# Payment settings
+payment:
+  - name: "paypal"
+    terms: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos."
+  - name: "cash on delievery"
+    terms: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos."
+  - name: "credit card"
+    terms: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos."
+  - name: "direct bank transfer"
+    terms: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos."
+
+# Social settings
+social:
+  - icon: "facebook"
+    url: "https://facebook.com"
+  - icon: "twitter"
+    url: "https://twitter.com"
+  - icon: "linkedin"
+    url: "https://linkedin.com"
+
+# Terms settings
+terms:
+  cart: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos nemo, nulla quaerat. Quibusdam non, eos, voluptatem reprehenderit hic nam! Laboriosam, sapiente! Praesentium."
+  shipping: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae, tempore maxime rerum iste dolorem mollitia perferendis distinctio. Quibusdam laboriosam rerum distinctio. Repudiandae fugit odit, sequi id!"

@@ -1,0 +1,60 @@
+- background: "assets/img/bg/1.jpg"
+  title:
+    animation:
+      delay: "0"
+      duration: "500ms"
+      name: "bounceInDown"
+    label: "Only today we offer free shipping"
+  subtitle:
+    animation:
+      delay: "500ms"
+      duration: "500ms"
+      name: "fadeInUp"
+    label: "Fashion Trends"
+  link:
+    animation:
+      delay: "1s"
+      duration: "500ms"
+      name: "fadeInUp"
+    href: "#"
+    label: "Shop Now"
+- background: "assets/img/bg/4.jpg"
+  title:
+    animation:
+      delay: "0"
+      duration: "500ms"
+      name: "fadeInDown"
+    label: "Only today we offer free shipping"
+  subtitle:
+    animation:
+      delay: "500ms"
+      duration: "500ms"
+      name: "fadeInUp"
+    label: "Summer Collection"
+  link:
+    animation:
+      delay: "1s"
+      duration: "500ms"
+      name: "fadeInLeftBig"
+    href: "#"
+    label: "Check Collection"
+- background: "assets/img/bg/2.jpg"
+  title:
+    animation:
+      delay: "0"
+      duration: "500ms"
+      name: "fadeInDown"
+    label: "Only today we offer free shipping"
+  subtitle:
+    animation:
+      delay: "500ms"
+      duration: "500ms"
+      name: "bounceInDown"
+    label: "Women Fashion"
+  link:
+    animation:
+      delay: "1s"
+      duration: "500ms"
+      name: "fadeInRightBig"
+    href: "#"
+    label: "Check Collection"

@@ -1,0 +1,165 @@
+<!-- ****** Header Area Start ****** -->
+<header class="header_area">
+  <!-- Top Header Area Start -->
+  <div class="top_header_area">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-end">
+        <div class="col-12 col-lg-7">
+          <div class="top_single_area d-flex align-items-center">
+            <!-- Logo Area -->
+            <div class="top_logo">
+              <a href="#">
+                <img src="{{ 'assets/img/core/logo.png' | relative_url }}">
+              </a>
+            </div>
+            <!-- Cart & Menu Area -->
+            <div class="header-cart-menu d-flex align-items-center ml-auto">
+              <!-- Cart Area -->
+              <div class="cart">
+                <a href="#" id="header-cart-btn" target="_blank">
+                  <span class="cart_quantity">
+                    {{site.data.cart.size}}
+                  </span>
+                  <i class="ti-bag"></i>
+                </a>
+                <!-- Cart List Area Start -->
+                <ul class="cart-list">
+                  {% assign total = 0 %}
+                  {% for product in site.data.cart %}
+                    {% assign sum = product.price | times: product.quantity %}
+                    {% assign total = total | plus: sum %}
+                    <li>
+                      <a href="#" class="image">
+                        <img
+                          src="{{ product.image | relative_url }}"
+                          class="cart-thumb"
+                          alt=""
+                        >
+                      </a>
+                      <div class="cart-item-desc">
+                        <h6><a href="#">{{product.name}}</a></h6>
+                        <p>
+                          {{product.quantity}}x -&nbsp;
+                          <span class="price">
+                            {{site.currency}}{{product.price}}
+                          </span>
+                        </p>
+                      </div>
+                      <span class="dropdown-product-remove">
+                        <i class="icon-cross"></i>
+                      </span>
+                    </li>
+                  {% endfor %}
+                  <li class="total">
+                    <span class="pull-right">
+                      Total: {{site.currency}}{{total}}
+                    </span>
+                    <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
+                    <a href="checkout.html" class="btn btn-sm btn-checkout">
+                      Checkout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {% if site.data.categories.list.size > 0 %}
+                <div class="header-right-side-menu ml-15">
+                  <a href="#" id="sideMenuBtn">
+                    <i class="ti-menu" aria-hidden="true"></i>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Top Header Area End -->
+  <div class="main_header_area">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-12 d-md-flex justify-content-between">
+          <!-- Header Social Area -->
+          <div class="header-social-area">
+            {% for network in site.social %}
+              <a href="{{network.url}}">
+                {% if forloop.index == 1 %}
+                  <span class="karl-level">Share</span>
+                {% endif %}
+                <i class="fa fa-{{network.icon}}" aria-hidden="true"></i>
+              </a>
+            {% endfor %}
+          </div>
+          <!-- Menu Area -->
+          <div class="main-menu-area">
+            <nav class="navbar navbar-expand-lg align-items-start">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#karl-navbar"
+                aria-controls="karl-navbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon">
+                  <i class="ti-menu"></i>
+                </span>
+              </button>
+              <div
+                class="collapse navbar-collapse align-items-start collapse"
+                id="karl-navbar"
+              >
+                <ul class="navbar-nav animated" id="nav">
+                  {% for item in site.menu %}
+                    <li class="nav-item {{item.type}}">
+                      {% if item.type == "dropdown" %}
+                        <a
+                          class="nav-link dropdown-toggle"
+                          href="#" id="karlDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          {% if item.hot %}
+                            <span class="karl-level">hot</span>
+                          {% endif %}
+                          {{item.label}}
+                        </a>
+                      {% else %}
+                        <a class="nav-link" href="index.html">
+                          {% if item.hot %}
+                            <span class="karl-level">hot</span>
+                          {% endif %}
+                          {{item.label}}
+                        </a>
+                      {% endif %}
+                      {% if item.items.size > 0 %}
+                        <div class="dropdown-menu">
+                          {% for subitem in item.items %}
+                            <a class="dropdown-item" href="{{subitem.href}}">
+                              {{subitem.label}}
+                            </a>
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- Help Line -->
+          <div class="help-line">
+            <a href="tel:{{site.telephone}}">
+              <i class="ti-headphone-alt"></i>
+              {{site.telephone}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ****** Header Area End ****** -->

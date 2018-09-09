@@ -1,0 +1,11 @@
+<!-- ****** Top Discount Area Start ****** -->
+<section class="top-discount-area d-md-flex align-items-center">
+  {% for discount in site.data.discounts %}
+    <!-- Single Discount Area -->
+    <div class="single-discount-area">
+      <h5>{{discount.title}}</h5>
+      <h6><a href="{{discount.href}}">{{discount.subtitle}}</a></h6>
+    </div>
+  {% endfor %}
+</section>
+<!-- ****** Top Discount Area End ****** -->

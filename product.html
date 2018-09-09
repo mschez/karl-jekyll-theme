@@ -1,0 +1,267 @@
+---
+layout: single
+title: Product Details
+---
+
+<!-- ****** Breadcumb Area Start ****** -->
+{% assign product = site.data.products.list[0] %}
+<div class="breadcumb_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ol class="breadcrumb d-flex align-items-center">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            {% assign cat = "" %}
+            {% assign categories = site.data.categories.list | where: "id", product.category %}
+            {% for category in categories %}
+              {% assign cat = category %}
+              <a href="{{category.href}}">
+                {{category.name}}
+              </a>
+            {% endfor %}
+          </li>
+          <li class="breadcrumb-item active">
+            {% assign subcategories = cat.subcategories | where: "id", product.subcategory %}
+            {% for subcategory in subcategories %}
+              <a href="{{subcategory.href}}">
+                {{subcategory.name}}
+              </a>
+            {% endfor %}
+          </li>
+        </ol>
+        <!-- btn -->
+        <a href="{{cat.href}}" class="backToHome d-block">
+          <i class="fa fa-angle-double-left"></i> Back to Category
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ****** Breadcumb Area End ****** -->
+
+<!-- ****** Single Product Details Area Start ****** -->
+<section class="single_product_details_area section_padding_0_100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="single_product_thumb">
+          <div
+            id="product_details_slider"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              {% for image in product.gallery %}
+                {% assign class = "" %}
+                {% if forloop.index == 1 %}
+                  {% assign class = "active" %}
+                {% endif %}
+                <li
+                  class="{{class}}"
+                  data-target="#product_details_slider"
+                  data-slide-to="{{ forloop.index | minus: 1 }}"
+                  style="background-image: url({{ image | relative_url }});"
+                >
+                </li>
+              {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+              {% for image in product.gallery %}
+                {% assign class = "carousel-item" %}
+                {% if forloop.index == 1 %}
+                  {% assign class = "carousel-item active" %}
+                {% endif %}
+                <div class="{{class}}">
+                  <a class="gallery_img" href="{{ image | relative_url }}">
+                    <img
+                      class="d-block w-100"
+                      src="{{ image | relative_url }}"
+                      alt="First slide"
+                    >
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="single_product_desc">
+          <h4 class="title"><a href="#">{{product.name}}</a></h4>
+          <h4 class="price">{{site.currency}}{{product.price}}</h4>
+          <p class="available">Available: &nbsp;
+            {% if product.stock %}
+              <span class="text-muted">In Stock</span>
+            {% else %}
+              <span class="text-muted">Unavailable</span>
+            {% endif %}
+          </p>
+          <div class="single_product_ratings mb-15">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          </div>
+          <div class="widget size mb-50">
+            <h6 class="widget-title">Size</h6>
+            <div class="widget-desc">
+              <ul>
+                {% for size in product.sizes %}
+                  <li><a href="#">{{size}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <!-- Add to Cart Form -->
+          <form class="cart clearfix mb-50 d-flex" method="post">
+            {% if product.availableQuantity > 0 %}
+              <div class="quantity">
+                <span
+                  class="qty-minus"
+                  onclick="decrementQuantity()"
+                >
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </span>
+                <input
+                  type="number"
+                  class="qty-text"
+                  id="qty"
+                  step="1"
+                  min="1"
+                  max="{{product.availableQuantity}}"
+                  name="quantity"
+                  value="1"
+                >
+                <span
+                  class="qty-plus"
+                  onclick="incrementQuantity()"
+                >
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+              </div>
+              <button
+                type="submit"
+                name="addtocart"
+                value="5"
+                class="btn cart-submit d-block"
+              >
+                Add to cart
+              </button>
+            {% endif %}
+          </form>
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h6 class="mb-0">
+                  <a
+                    data-toggle="collapse"
+                    href="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Information
+                  </a>
+                </h6>
+              </div>
+              <div
+                id="collapseOne"
+                class="collapse show"
+                role="tabpanel"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <p>{{product.description}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h6 class="mb-0">
+                  <a
+                    class="collapsed"
+                    data-toggle="collapse"
+                    href="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Cart Details
+                  </a>
+                </h6>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <p>{{site.terms.cart}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingThree">
+                <h6 class="mb-0">
+                  <a
+                    class="collapsed"
+                    data-toggle="collapse"
+                    href="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Shipping and Returns
+                  </a>
+                </h6>
+              </div>
+              <div
+                id="collapseThree"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingThree"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <p>{{site.terms.shipping}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ****** Single Product Details Area End ****** -->
+
+{% include quickviewmodal.html product=product %}
+
+<section class="you_may_like_area clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section_heading text-center">
+          <h2>Related Products</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="you_make_like_slider owl-carousel">
+          {% for related in product.related %}
+            {% assign products = site.data.products.list | where: "id", related %}
+            {% assign p = products[0] %}
+            <div class="single_gallery_item">
+              {% include product.html product=p %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,429 @@
+all:
+  - availableQuantity: 8
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000001"
+    image: "assets/img/product/product-01.jpg"
+    name: "Jeans midi dress"
+    price: 79.90
+    related:
+      - "0000000002"
+      - "0000000006"
+    sizes:
+      - 34
+      - 38
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 2
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-05.jpg"
+      - "assets/img/product/product-06.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000002"
+    image: "assets/img/product/product-02.jpg"
+    name: "Cocktail dress"
+    price: 29.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000005"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 1
+    category: "men"
+    color: "green"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000003"
+    image: "assets/img/product/product-03.jpg"
+    name: "Jeans"
+    price: 49.90
+    related:
+      - "1"
+    sizes:
+    stock: true
+    subcategory: "pants"
+  - availableQuantity: 0
+    category: "bags"
+    color: "cyan"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-03.jpg"
+    href: "#"
+    id: "0000000004"
+    image: "assets/img/product/product-04.jpg"
+    name: "Green Purse"
+    price: 19.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000005"
+    stock: false
+    subcategory: "purses"
+  - availableQuantity: 10
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000005"
+    image: "assets/img/product/product-05.jpg"
+    name: "Short jeans"
+    price: 9.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000006"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "shorts"
+  - availableQuantity: 7
+    category: "kids"
+    color: "gray"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-03.jpg"
+      - "assets/img/product/product-05.jpg"
+    href: "#"
+    id: "0000000006"
+    image: "assets/img/product/product-06.jpg"
+    name: "Body dress"
+    price: 15.90
+    related:
+      - "0000000003"
+    sizes:
+      - 16
+      - 18
+      - 22
+    stock: true
+    subcategory: "bodies"
+  - availableQuantity: 20
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-09.jpg"
+      - "assets/img/product/product-07.jpg"
+    href: "#"
+    id: "0000000007"
+    image: "assets/img/product/product-06.jpg"
+    name: "Mini dress"
+    price: 19.90
+    related:
+      - "0000000002"
+      - "0000000006"
+    sizes:
+      - 34
+      - 38
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 20
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-07.jpg"
+    href: "#"
+    id: "0000000008"
+    image: "assets/img/product/product-08.jpg"
+    name: "Weeding dress"
+    price: 229.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000005"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 19
+    category: "men"
+    color: "green"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-08.jpg"
+    href: "#"
+    id: "0000000009"
+    image: "assets/img/product/product-09.jpg"
+    name: "Suit"
+    price: 149.90
+    related:
+      - "0000000003"
+    sizes:
+      - 50
+    stock: true
+    subcategory: "suits"
+
+
+list:
+  - availableQuantity: 8
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000001"
+    image: "assets/img/product/product-01.jpg"
+    name: "Jeans midi dress"
+    price: 79.90
+    related:
+      - "0000000002"
+      - "0000000006"
+    sizes:
+      - 34
+      - 38
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 2
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-05.jpg"
+      - "assets/img/product/product-06.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000002"
+    image: "assets/img/product/product-02.jpg"
+    name: "Cocktail dress"
+    price: 29.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000005"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 1
+    category: "men"
+    color: "green"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000003"
+    image: "assets/img/product/product-03.jpg"
+    name: "Jeans"
+    price: 49.90
+    related:
+      - "1"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "pants"
+  - availableQuantity: 0
+    category: "bags"
+    color: "cyan"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-03.jpg"
+    href: "#"
+    id: "0000000004"
+    image: "assets/img/product/product-04.jpg"
+    name: "Green Purse"
+    price: 19.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000005"
+    stock: false
+    subcategory: "purses"
+  - availableQuantity: 10
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-04.jpg"
+    href: "#"
+    id: "0000000005"
+    image: "assets/img/product/product-05.jpg"
+    name: "Short jeans"
+    price: 9.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000006"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "shorts"
+  - availableQuantity: 7
+    category: "kids"
+    color: "gray"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-03.jpg"
+      - "assets/img/product/product-05.jpg"
+    href: "#"
+    id: "0000000006"
+    image: "assets/img/product/product-06.jpg"
+    name: "Body dress"
+    price: 15.90
+    related:
+      - "0000000003"
+    sizes:
+      - 16
+      - 18
+      - 22
+    stock: true
+    subcategory: "bodies"
+
+arrivals:
+  - availableQuantity: 20
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-09.jpg"
+      - "assets/img/product/product-07.jpg"
+    href: "#"
+    id: "0000000007"
+    image: "assets/img/product/product-06.jpg"
+    name: "Mini dress"
+    price: 19.90
+    related:
+      - "0000000002"
+      - "0000000006"
+    sizes:
+      - 34
+      - 38
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 20
+    category: "women"
+    color: "red"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-07.jpg"
+    href: "#"
+    id: "0000000008"
+    image: "assets/img/product/product-08.jpg"
+    name: "Weeding dress"
+    price: 229.90
+    related:
+      - "0000000001"
+      - "0000000003"
+      - "0000000004"
+      - "0000000005"
+    sizes:
+      - 34
+    stock: true
+    subcategory: "dresses"
+  - availableQuantity: 19
+    category: "men"
+    color: "green"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-08.jpg"
+    href: "#"
+    id: "0000000009"
+    image: "assets/img/product/product-09.jpg"
+    name: "Suit"
+    price: 149.90
+    related:
+      - "0000000003"
+    sizes:
+      - 50
+    stock: true
+    subcategory: "suits"
+
+recommended:
+  - availableQuantity: 19
+    category: "men"
+    color: "green"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-08.jpg"
+    href: "#"
+    id: "0000000009"
+    image: "assets/img/product/product-09.jpg"
+    name: "Suit"
+    price: 149.90
+    related:
+      - "0000000003"
+    sizes:
+      - 50
+    stock: true
+    subcategory: "suits"
+  - availableQuantity: 7
+    category: "kids"
+    color: "gray"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus."
+    discount: 0
+    gallery:
+      - "assets/img/product/product-01.jpg"
+      - "assets/img/product/product-02.jpg"
+      - "assets/img/product/product-03.jpg"
+      - "assets/img/product/product-05.jpg"
+    href: "#"
+    id: "0000000006"
+    image: "assets/img/product/product-06.jpg"
+    name: "Body dress"
+    price: 15.90
+    related:
+      - "0000000003"
+    sizes:
+      - 16
+      - 18
+      - 22
+    stock: true
+    subcategory: "bodies"

@@ -1,0 +1,8 @@
+- name: "Women's Fashion"
+  image: "assets/img/product/product-11.jpg"
+  price: 10
+  quantity: 1
+- name: "Women's Fashion"
+  image: "assets/img/product/product-12.jpg"
+  price: 8
+  quantity: 2
